@@ -7,6 +7,7 @@
  "field_order": [
   "license_name",
   "owner_name",
+  "price",
   "column_break_noxw",
   "start_date",
   "end_date"
@@ -35,11 +36,16 @@
    "fieldname": "end_date",
    "fieldtype": "Date",
    "label": "End Date"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Float",
+   "label": "Price"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-07 17:08:51.863106",
+ "modified": "2024-11-14 09:14:11.197838",
  "modified_by": "Administrator",
  "module": "License",
  "name": "License",
