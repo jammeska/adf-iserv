@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format: CS-{#####}",
+ "creation": "2024-11-20 11:38:40.777212",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sub_category_name",
+  "category"
+ ],
+ "fields": [
+  {
+   "fieldname": "sub_category_name",
+   "fieldtype": "Data",
+   "label": "Sub category name"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Category"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-20 13:51:46.151049",
+ "modified_by": "Administrator",
+ "module": "employee inf",
+ "name": "Sub Category",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "sub_category_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
