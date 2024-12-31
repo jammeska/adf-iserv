@@ -5,19 +5,25 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "datalic"
+  "datalic",
+  "test"
  ],
  "fields": [
   {
    "fieldname": "datalic",
    "fieldtype": "Data",
    "label": "datalic"
+  },
+  {
+   "fieldname": "test",
+   "fieldtype": "Barcode",
+   "label": "test"
   }
  ],
  "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-11-21 13:14:52.469506",
+ "modified": "2024-12-29 09:08:04.389996",
  "modified_by": "Administrator",
  "module": "test-lic",
  "name": "test-lic",
