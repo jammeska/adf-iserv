@@ -1,0 +1,234 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-26 09:20:22.034780",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "visitors_login_section",
+  "visitors_login_column",
+  "visitor_name",
+  "id_number",
+  "email",
+  "city",
+  "nationality",
+  "department_name",
+  "reason_for_visit",
+  "mobile_number",
+  "other",
+  "devices",
+  "chek_device",
+  "visitor_devices",
+  "amended_form",
+  "date_of_visit",
+  "visiting_time",
+  "exit_time",
+  "status",
+  "column_break_opix",
+  "drivers_name",
+  "car_number",
+  "national",
+  "vehicle_type_and_model",
+  "plate_number",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "visitor_name",
+   "fieldtype": "Data",
+   "label": "Visitor name"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Link",
+   "label": "Nationality",
+   "options": "Nationality",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reason_for_visit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reason for visit",
+   "options": "reason of visit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Phone",
+   "label": "Mobile number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "other",
+   "fieldtype": "Data",
+   "label": "Other"
+  },
+  {
+   "fieldname": "date_of_visit",
+   "fieldtype": "Date",
+   "label": "date of visit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visiting_time",
+   "fieldtype": "Time",
+   "label": "Visiting time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visitors_login_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "id_number",
+   "fieldtype": "Int",
+   "label": "ID Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department_name",
+   "fieldtype": "Link",
+   "label": "department name",
+   "options": "Department"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "status",
+   "options": "IN\nOUT",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "exit_time",
+   "fieldtype": "Time",
+   "label": "exit time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_form",
+   "fieldtype": "Link",
+   "label": "amended Form",
+   "no_copy": 1,
+   "options": "Visitor",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "devices",
+   "fieldtype": "Check",
+   "label": "devices"
+  },
+  {
+   "fieldname": "column_break_opix",
+   "fieldtype": "Column Break",
+   "label": "car information"
+  },
+  {
+   "fieldname": "drivers_name",
+   "fieldtype": "Data",
+   "label": "Driver's name"
+  },
+  {
+   "fieldname": "car_number",
+   "fieldtype": "Int",
+   "label": "ID Car number"
+  },
+  {
+   "fieldname": "national",
+   "fieldtype": "Data",
+   "label": "National"
+  },
+  {
+   "fieldname": "vehicle_type_and_model",
+   "fieldtype": "Data",
+   "label": "Vehicle type and model"
+  },
+  {
+   "fieldname": "plate_number",
+   "fieldtype": "Data",
+   "label": "Plate number"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Visitor",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "docstatus",
+   "fieldname": "chek_device",
+   "fieldtype": "Data",
+   "label": "check device"
+  },
+  {
+   "depends_on": "devices",
+   "fieldname": "visitor_devices",
+   "fieldtype": "Table",
+   "label": "visitor devices",
+   "options": "visitor device"
+  },
+  {
+   "fieldname": "visitors_login_column",
+   "fieldtype": "Column Break",
+   "label": "Visitors login"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-16 13:29:18.470736",
+ "modified_by": "Administrator",
+ "module": "Visitor",
+ "name": "Visitor",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "security",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

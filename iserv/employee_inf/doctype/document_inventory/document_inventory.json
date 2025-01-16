@@ -1,0 +1,179 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:RD-{#####}",
+ "creation": "2024-12-01 14:27:11.267734",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_id",
+  "employee_name",
+  "work_site",
+  "end_of_service_date",
+  "end_of_service_date_hejry",
+  "type_of_end_of_service",
+  "date_of_start_of_preservation",
+  "category",
+  "document_type",
+  "document_subject",
+  "document_date",
+  "document_number",
+  "number_of_papers",
+  "duration_of_preservation",
+  "file_number",
+  "comments",
+  "mandotry_attach",
+  "attachments"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Id",
+   "options": "Employee Information"
+  },
+  {
+   "fetch_from": "employee_id.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_id.work_site",
+   "fieldname": "work_site",
+   "fieldtype": "Data",
+   "label": "Work site",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_id.end_of_service_date",
+   "fieldname": "end_of_service_date",
+   "fieldtype": "Date",
+   "label": "End of service date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_id.end_of_service_date_hejry",
+   "fieldname": "end_of_service_date_hejry",
+   "fieldtype": "Data",
+   "label": "end of service date hejry",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_id.type_of_end_of_service",
+   "fieldname": "type_of_end_of_service",
+   "fieldtype": "Data",
+   "label": "Type of end of service",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_id.date_of_start_of_preservation",
+   "fieldname": "date_of_start_of_preservation",
+   "fieldtype": "Data",
+   "label": "Date of start of preservation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Category"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Data",
+   "label": "Document type"
+  },
+  {
+   "fieldname": "document_number",
+   "fieldtype": "Data",
+   "label": "Document number"
+  },
+  {
+   "fieldname": "number_of_papers",
+   "fieldtype": "Int",
+   "label": "Number of papers"
+  },
+  {
+   "fieldname": "duration_of_preservation",
+   "fieldtype": "Data",
+   "label": "Duration of preservation"
+  },
+  {
+   "fieldname": "file_number",
+   "fieldtype": "Data",
+   "label": "File number"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "comments"
+  },
+  {
+   "default": "0",
+   "fetch_from": "category.check",
+   "fieldname": "mandotry_attach",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "mandotry attach"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments",
+   "mandatory_depends_on": "eval:(doc.mandotry_attach)"
+  },
+  {
+   "fieldname": "document_date",
+   "fieldtype": "Data",
+   "label": "Document date"
+  },
+  {
+   "fieldname": "document_subject",
+   "fieldtype": "Data",
+   "label": "Document subject"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-01 14:54:53.210984",
+ "modified_by": "Administrator",
+ "module": "employee inf",
+ "name": "Document inventory",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "test",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
